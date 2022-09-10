@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/routes/index.tsx"],
-  "sourcesContent": ["import { Box, Text } from \"@chakra-ui/react\";\nimport { Link } from \"@remix-run/react\";\n\nexport const index = () => {\n  return (\n    <Box>\n      <Text>Hello</Text>\n    </Box>\n  );\n};\n\nexport default index;\n"],
-  "mappings": ";;;;;;;;;;AAAA;AAGO,IAAM,QAAQ,MAAM;AACzB,SACE,mDAAC;AAAA,IACC,6DAAC;AAAA,MAAK;AAAA,OAAN;AAAA;AAAA;AAAA;AAAA,WAAW;AAAA,KADb;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;AAEA,IAAO,iBAAQ;",
-  "names": []
-}

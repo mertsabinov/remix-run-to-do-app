@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/routes/index.tsx"],
-  "sourcesContent": ["import { Box, Text } from \"@chakra-ui/react\";\nimport { Link } from \"@remix-run/react\";\n\nexport default function Index() {\n  return <Box fontFamily=\"system-ui, sans-serif\" lineHeight={1.4}></Box>;\n}\n"],
-  "mappings": ";;;;;;;;;AAAA;AAGe,SAAR,QAAyB;AAC9B,SAAO,mDAAC;AAAA,IAAI,YAAW;AAAA,IAAwB,YAAY;AAAA,KAApD;AAAA;AAAA;AAAA;AAAA,SAAyD;AAClE;",
-  "names": []
-}
