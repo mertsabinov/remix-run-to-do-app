@@ -1,5 +1,6 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, HStack, Text } from "@chakra-ui/react";
 import { FC } from "react";
+import { DeleteIcon } from "@chakra-ui/icons";
 
 interface IProps {
   id: string;
@@ -17,7 +18,16 @@ export const Card: FC<IProps> = ({ id, title, content }) => {
       padding="3%"
     >
       <Text fontWeight="bold">{title}</Text>
-      <Text>{content}</Text>
+      <HStack justifyContent="space-between">
+        <Text w="90%">{content}</Text>
+        <DeleteIcon
+          color="red.400"
+          h={6}
+          w={6}
+          marginRight={4}
+          _hover={{ background: "red.200", borderRadius: "25px" }}
+        />
+      </HStack>
     </Box>
   );
 };
