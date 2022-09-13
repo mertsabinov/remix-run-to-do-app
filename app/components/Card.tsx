@@ -1,6 +1,12 @@
 import { Box, Text } from "@chakra-ui/react";
+import { FC } from "react";
 
-export const Card = () => {
+interface IProps {
+  title: string;
+  content: string;
+}
+
+export const Card: FC<IProps> = ({ title, content }) => {
   return (
     <Box
       backgroundColor="green.50"
@@ -8,8 +14,8 @@ export const Card = () => {
       marginTop="5%"
       padding="3%"
     >
-      <Text fontWeight="bold">Card</Text>
-      <Text>Card content</Text>
+      <Text fontWeight="bold">{title}</Text>
+      <Text>{content}</Text>
     </Box>
   );
 };
