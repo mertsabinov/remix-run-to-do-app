@@ -27,7 +27,7 @@ export const index = () => {
       <Navbar />
       {data.map(({ id, key, value }) => (
         <Box id={id} marginTop="2%" marginLeft="25%" marginRight="25%">
-          <Card title={key} content={value} />
+          <Card id={id} title={key} content={value} />
         </Box>
       ))}
     </Box>
