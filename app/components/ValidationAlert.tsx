@@ -15,7 +15,7 @@ export const ValidationAlert: FC<IProps> = ({ title, description }) => {
   return (
     <Alert status="error">
       <AlertIcon />
-      <AlertTitle>{title}</AlertTitle>
+      <AlertTitle>{title} :</AlertTitle>
       <AlertDescription>{description}</AlertDescription>
     </Alert>
   );
