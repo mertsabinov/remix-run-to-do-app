@@ -1,6 +1,7 @@
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import { FC } from "react";
 import { DeleteIcon } from "@chakra-ui/icons";
+import { API_URL } from "~/config";
 
 interface IProps {
   id: string;
@@ -9,6 +10,18 @@ interface IProps {
 }
 
 export const Card: FC<IProps> = ({ id, title, content }) => {
+  const deleteItem = async (idx: string) => {
+    const url = API_URL || "";
+    const requestOptions = {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id: idx }),
+    };
+    await fetch(url, requestOptions);
+    window.location.reload();
+  };
   return (
     <Box
       id={id}
@@ -21,6 +34,7 @@ export const Card: FC<IProps> = ({ id, title, content }) => {
       <HStack justifyContent="space-between">
         <Text w="90%">{content}</Text>
         <DeleteIcon
+          onClick={() => deleteItem(id)}
           color="red.400"
           h={6}
           w={6}
