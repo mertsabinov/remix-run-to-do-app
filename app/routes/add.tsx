@@ -3,6 +3,7 @@ import { redirect } from "@remix-run/node";
 import { Navbar } from "~/components/Navbar";
 import ValidationAlert from "~/components/ValidationAlert";
 import { Form, useActionData } from "@remix-run/react";
+import { API_URL } from "~/config";
 
 export const action = async ({ request }: any) => {
   const formData = await request.formData();
@@ -16,7 +17,7 @@ export const action = async ({ request }: any) => {
     return "value is empty";
   }
   // post to do
-  const url = process.env.API_URL || "";
+  const url = API_URL || "";
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
